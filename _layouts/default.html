@@ -1,0 +1,83 @@
+<div class="balloon-description cu-map-feed-content">
+  <h3>Room Details</h3>
+<!-- <strong>{{ page.title }}</strong> -->
+<ul>
+  <!--
+  {% if page.code %}
+    <li>Building Code: {{ page.code }}</li>
+  {% endif %}
+  {% if page.room %}
+    <li>Room Number: {{ page.room }}</li>
+  {% endif %}
+  -->
+
+  <li>
+    <ul>
+      <li><strong>Room Type:</strong> {{ page.type }}</li>
+      <!-- <li><strong>Able to Reserve:</strong> {{ page.reservations | default: 'No' }}</li> -->
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><strong>Max Capacity:</strong> {{ page.capacity }}</li>
+      <li><strong>Seating Capacity:</strong> {{ page.seating }}</li>
+      <li><strong>Seating Type:</strong> {{ page.seating_type }}</li>
+      <li><strong>Furniture Type:</strong> {{ page.furniture }}</li>
+      <li><strong>Windows:</strong> {{ page.windows | 'No' }}</li>
+      <li><strong>Power Outlets:</strong> {{ page.power_outlets | default: None }}</li>
+      <li><strong>Ethernet:</strong> {{ page.ethernet | default: 'No' }}</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><strong>Presentation System:</strong> {{ page.presentation }}</li>
+      <li><strong>Number of Displays:</strong> {{ page.displays }}</li>
+      <li><strong>Display Input Types:</strong> {{ page.input_types }}</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><strong>Computers:</strong> {{ page.computers | default: None }}</li>
+      <li><strong>Sound System:</strong> {{ page.sound_system }}</li>
+      <li><strong>DVD/CD Player:</strong> {{ page.dvdcd }}</li>
+      <li><strong>Microphones:</strong> {{ page.microphones }}</li>
+      <li><strong>Assisted Listening System:</strong> {{ page.assisted_listening }}</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><strong>Board Type:</strong> {{ page.board_type }}</li>
+      <li><strong>Lecture Capture:</strong> {{ page.lecture_capture }}</li>
+      <li><strong>Document Camera:</strong> {{ page.document_camera }}</li>
+      <li><strong>Distance Education:</strong> {{ page.distance_education }}</li>
+      <li><strong>Clicker Frequency:</strong> {{ page.clicker_frequency }}</li>
+    </ul>
+  </li>
+</ul>
+</div>
+<style>
+  #bln-shell .bln-modal #balloon-content #balloon-details .balloon-description.cu-map-feed-content {
+    padding: 0 0 10px 0;
+  }
+  #bln-shell .bln-modal #balloon-content #balloon-details .cu-map-feed-content ul,
+  #bln-shell .bln-modal #balloon-content #balloon-details .cu-map-feed-content ul li {
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  #bln-shell .bln-modal #balloon-content #balloon-details .cu-map-feed-content ul li ul li {
+    list-style:none;
+    margin:0;
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    &:last-child {
+      border-bottom:none;
+    }
+  }
+  #bln-shell .bln-modal #balloon-content #balloon-details .cu-map-feed-content ul > li > ul {
+    border-top:4px solid #ddd;
+  }
+  #bln-shell .bln-modal #balloon-content #balloon-details .cu-map-feed-content ul > li:last-child ul {
+    border-bottom:4px solid #ddd;
+  }
+</style>
